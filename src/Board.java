@@ -34,7 +34,9 @@ public class Board  extends JPanel implements ActionListener {
 
         for (int y=0;y<14;y++){
             for(int x=0;x<14;x++){
-                
+              if(map.getMap(x,y).equals("g")){
+                  g.drawImage(map.getGrass(),x*32,y*32,null);
+              }
             }
         }
          //g.setColor(Color.red);
