@@ -1,4 +1,4 @@
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -15,7 +15,7 @@ public class Map {
     }
     public void openFile() {
         try {
-            sc = new Scanner(new File(""));
+            sc = new Scanner(new File("C://"));
         } catch (Exception e){
         System.out.println(" Error loading map");
         }
