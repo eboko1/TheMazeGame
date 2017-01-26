@@ -26,6 +26,9 @@ public class Map {
     public Image getGrass(){
         return grass;
     }
+    public Image getWall(){
+        return wall;
+    }
 
 
     public String getMap(int x, int y){
