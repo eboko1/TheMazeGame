@@ -14,6 +14,12 @@ public class Map {
        closeFile();
 
     }
+    public String getMap(int x, int y){
+        String index = Map[y].substring(x,x+1);
+        return index;
+    }
+
+
     public void openFile() {
         try {
             sc = new Scanner(new File("C://"));
@@ -25,11 +31,12 @@ public class Map {
     public void readFile() {
         while (sc.hasNext()){
             for(int i=0;i<14;i++){
-                
+               Map[i] = sc.next();
             }
         }
     }
     public void closeFile() {
+        sc.close();
     }
 
 
