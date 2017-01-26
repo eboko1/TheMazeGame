@@ -32,7 +32,12 @@ public class Board  extends JPanel implements ActionListener {
     public void paint(Graphics g){
         super.paint(g);//not paint
 
-         g.setColor(Color.red);
-         g.fillRect(45,60,32,32);
+        for (int y=0;y<14;y++){
+            for(int x=0;x<14;x++){
+                
+            }
+        }
+         //g.setColor(Color.red);
+         //g.fillRect(45,60,32,32);
     }
 }
