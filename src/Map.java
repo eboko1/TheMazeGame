@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -8,12 +10,24 @@ public class Map {
     private Scanner sc;
     private String Map[] = new String [14];
 
+    private Image grass,wall;
+
     public Map(){
+        ImageIcon img = new ImageIcon("C://");
+        grass = img.getImage();
+        img = new ImageIcon("C://");
+        wall = img.getImage();
+
        openFile();
        readFile();
        closeFile();
 
     }
+    public Image getGrass(){
+        return grass;
+    }
+
+
     public String getMap(int x, int y){
         String index = Map[y].substring(x,x+1);
         return index;

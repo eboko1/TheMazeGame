@@ -11,7 +11,13 @@ import java.awt.event.ActionListener;
 public class Board  extends JPanel implements ActionListener {
     private Timer timer;
 
+    private  Map map;
+
+
+
     public Board(){
+        map =new Map();
+
         timer = new Timer(25,this);
         timer.start();
     }
