@@ -6,6 +6,7 @@ import java.util.*;
  */
 public class Map {
     private Scanner sc;
+    private String Map[] = new String [14];
 
     public Map(){
        openFile();
@@ -22,6 +23,11 @@ public class Map {
     }
 
     public void readFile() {
+        while (sc.hasNext()){
+            for(int i=0;i<14;i++){
+                
+            }
+        }
     }
     public void closeFile() {
     }
