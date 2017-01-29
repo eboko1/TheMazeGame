@@ -13,9 +13,9 @@ public class Map {
     private Image grass,wall;
 
     public Map(){
-        ImageIcon img = new ImageIcon("C:\\Users\\Vika\\IdeaProjects\\TheMazeGame\\src");
+        ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//glass.png");
         grass = img.getImage();
-        img = new ImageIcon("C:\\Users\\Vika\\IdeaProjects\\TheMazeGame\\src");
+        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//wall.png");
         wall = img.getImage();
 
        openFile();
