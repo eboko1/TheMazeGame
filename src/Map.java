@@ -13,9 +13,9 @@ public class Map {
     private Image grass,wall;
 
     public Map(){
-        ImageIcon img = new ImageIcon("C://");
+        ImageIcon img = new ImageIcon("C:\\Users\\Vika\\IdeaProjects\\TheMazeGame\\src");
         grass = img.getImage();
-        img = new ImageIcon("C://");
+        img = new ImageIcon("C:\\Users\\Vika\\IdeaProjects\\TheMazeGame\\src");
         wall = img.getImage();
 
        openFile();
@@ -39,7 +39,7 @@ public class Map {
 
     public void openFile() {
         try {
-            sc = new Scanner(new File("C://"));
+            sc = new Scanner(new File("C://Users//Vika//IdeaProjects//TheMazeGame//src//Map.txt"));
         } catch (Exception e){
         System.out.println(" Error loading map");
         }
