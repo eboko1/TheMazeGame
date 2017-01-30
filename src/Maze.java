@@ -6,6 +6,7 @@ import javax.swing.*;
 public class Maze extends JFrame {
     public final int WIDTH = 500;
     public final int HEIGHT = 400;
+
     public Maze(){
         JFrame frame  = new JFrame();
         frame.setTitle(" Maze Game ");
