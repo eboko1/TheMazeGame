@@ -12,7 +12,7 @@ public class Board  extends JPanel implements ActionListener {
     private Timer timer;
 
     private  Map map;
-
+    private Player player;
 
 
     public Board(){
@@ -42,6 +42,7 @@ public class Board  extends JPanel implements ActionListener {
                 }
 
             }
+        
         }
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);
