@@ -4,8 +4,8 @@ import javax.swing.*;
  * Created by Vika on 25.01.2017.
  */
 public class Maze extends JFrame {
-    public final int WIDTH = 500;
-    public final int HEIGHT = 400;
+    public final int WIDTH = 464;
+    public final int HEIGHT = 485;
 
     public Maze(){
         JFrame frame  = new JFrame();
