@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by Vika on 25.01.2017.
@@ -46,5 +48,17 @@ public class Board  extends JPanel implements ActionListener {
         }
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);
+    }
+
+    public class Al extends KeyAdapter{
+        public void  keyPressed(KeyEvent e){
+
+        }
+        public  void keyRelased(KeyEvent e){
+
+        }
+        public  void keyTyped(KeyEvent e){
+
+        }
     }
 }
