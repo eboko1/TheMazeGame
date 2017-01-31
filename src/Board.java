@@ -19,7 +19,8 @@ public class Board  extends JPanel implements ActionListener {
 
     public Board(){
         map =new Map();
-
+        player = new Player();
+        
         timer = new Timer(25,this);
         timer.start();
     }
@@ -46,6 +47,7 @@ public class Board  extends JPanel implements ActionListener {
             }
         
         }
+        g.drawImage(player.getPlayer(),player.getX(),player.getY(),null);
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);
     }
@@ -55,17 +57,17 @@ public class Board  extends JPanel implements ActionListener {
         int keycode = e.getKeyCode();
             if (keycode == KeyEvent.VK_W){
                 player.move(0,-32,0,-1);
-            }
+              }
 
             if (keycode == KeyEvent.VK_S){
                 player.move(0,32,0,1);
-             }
+                 }
              if (keycode == KeyEvent.VK_A){
                 player.move(-32,0,-1,0);
-            }
+                 }
             if (keycode == KeyEvent.VK_D) {
                 player.move(32,0,32,0);
-             }
+                 }
           }
 
         public  void keyRelased(KeyEvent e){
