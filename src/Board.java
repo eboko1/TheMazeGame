@@ -20,7 +20,7 @@ public class Board  extends JPanel implements ActionListener {
     public Board(){
         map =new Map();
         player = new Player();
-        addKeyListener(new Al());
+        addKeyListener(new Al());// add class Al
         setFocusable(true);
 
         timer = new Timer(25,this);
