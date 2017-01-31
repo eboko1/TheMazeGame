@@ -52,8 +52,22 @@ public class Board  extends JPanel implements ActionListener {
 
     public class Al extends KeyAdapter{
         public void  keyPressed(KeyEvent e){
+        int keycode = e.getKeyCode();
+            if (keycode == KeyEvent.VK_W){
+                player.move(0,-32,0,-1);
+            }
 
-        }
+            if (keycode == KeyEvent.VK_S){
+                player.move(0,32,0,1);
+             }
+             if (keycode == KeyEvent.VK_A){
+                player.move(-32,0,-1,0);
+            }
+            if (keycode == KeyEvent.VK_D) {
+                player.move(32,0,32,0);
+             }
+          }
+
         public  void keyRelased(KeyEvent e){
 
         }
