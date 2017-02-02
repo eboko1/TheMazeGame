@@ -20,6 +20,7 @@ public class Board  extends JPanel implements ActionListener {
     public Board(){
         map =new Map();
         player = new Player();
+
         addKeyListener(new Al());// add class Al
         setFocusable(true);
 
