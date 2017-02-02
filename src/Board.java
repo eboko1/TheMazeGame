@@ -15,6 +15,7 @@ public class Board  extends JPanel implements ActionListener {
 
     private  Map map;
     private Player player;
+    private String message="";
 
 
     public Board(){
@@ -30,6 +31,9 @@ public class Board  extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (map.getMap(player.getTileX(),player.getTileY()).equals("f")){
+            message=("Winner");
+        }
         repaint();
     }
 
@@ -53,6 +57,8 @@ public class Board  extends JPanel implements ActionListener {
             }
         
         }
+        g.drawString(message,50,50); //  winner
+
         g.drawImage(player.getPlayer(),player.getTileX()*32,player.getTileY()*32,null);
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);28
