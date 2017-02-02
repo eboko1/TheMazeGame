@@ -13,11 +13,11 @@ public class Map {
     private Image grass,wall,finish;
 
     public Map(){
-        ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//glass.png");
+        ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//res//glass.png");
         grass = img.getImage();
-        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//wall.png");
+        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//res//wall.png");
         wall = img.getImage();
-        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//finish.png");
+        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//res//finish.png");
         finish = img.getImage();
 
        openFile();
@@ -42,7 +42,7 @@ public class Map {
 
     public void openFile() {
         try {
-            sc = new Scanner(new File("C://Users//Vika//IdeaProjects//TheMazeGame//src//Map.txt"));
+            sc = new Scanner(new File("C://Users//Vika//IdeaProjects//TheMazeGame//src//res//Map.txt"));
         } catch (Exception e){
         System.out.println(" Error loading map");
         }

@@ -9,7 +9,7 @@ public class Player {
     private Image player;
 
     public Player(){
-        ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//player.png");
+        ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//res//player.png");
         player = img.getImage();
 
         x=32;
@@ -22,12 +22,14 @@ public class Player {
     public Image getPlayer (){
         return player;
     }
+
     public int getX(){
         return x;
     }
     public int getY(){
         return y;
     }
+
     public int getTileX(){
         return tileX;
     }
