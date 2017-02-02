@@ -50,7 +50,7 @@ public class Board  extends JPanel implements ActionListener {
             }
         
         }
-        g.drawImage(player.getPlayer(),player.getX(),player.getY(),null);
+        g.drawImage(player.getPlayer(),player.getTileX(),player.getTileY(),null);
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);28
                 g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
@@ -60,17 +60,17 @@ public class Board  extends JPanel implements ActionListener {
         public void  keyPressed(KeyEvent e){
         int keycode = e.getKeyCode();
             if (keycode == KeyEvent.VK_UP){
-                player.move(0,-32,0,-1);
+                player.move(0,-1);
               }
 
             if (keycode == KeyEvent.VK_DOWN){
-                player.move(0,32,0,1);
+                player.move(0,1);
                  }
              if (keycode == KeyEvent.VK_LEFT){
-                player.move(-32,0,-1,0);
+                player.move(-1,0);
                  }
             if (keycode == KeyEvent.VK_RIGHT) {
-                player.move(32,0,32,0);
+                player.move(1,0);
                  }
           }
 
