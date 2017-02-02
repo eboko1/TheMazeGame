@@ -41,6 +41,5 @@ public class Player {
 
         tileX = tileX + tx;
         tileY = tileY + ty;
-        return ;
     }
 }

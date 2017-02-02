@@ -51,23 +51,24 @@ public class Board  extends JPanel implements ActionListener {
         }
         g.drawImage(player.getPlayer(),player.getX(),player.getY(),null);
          //g.setColor(Color.red);
-         //g.fillRect(45,60,32,32);
+         //g.fillRect(45,60,32,32);28
+                g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
     }
 
     public class Al extends KeyAdapter{
         public void  keyPressed(KeyEvent e){
         int keycode = e.getKeyCode();
-            if (keycode == KeyEvent.VK_W){
+            if (keycode == KeyEvent.VK_UP){
                 player.move(0,-32,0,-1);
               }
 
-            if (keycode == KeyEvent.VK_S){
+            if (keycode == KeyEvent.VK_DOWN){
                 player.move(0,32,0,1);
                  }
-             if (keycode == KeyEvent.VK_A){
+             if (keycode == KeyEvent.VK_LEFT){
                 player.move(-32,0,-1,0);
                  }
-            if (keycode == KeyEvent.VK_D) {
+            if (keycode == KeyEvent.VK_RIGHT) {
                 player.move(32,0,32,0);
                  }
           }

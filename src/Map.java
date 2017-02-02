@@ -10,19 +10,22 @@ public class Map {
     private Scanner sc;
     private String Map[] = new String [14];
 
-    private Image grass,wall;
+    private Image grass,wall,finish;
 
     public Map(){
         ImageIcon img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//glass.png");
         grass = img.getImage();
         img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//wall.png");
         wall = img.getImage();
+        img = new ImageIcon("C://Users//Vika//IdeaProjects//TheMazeGame//src//finish.png");
+        finish = img.getImage();
 
        openFile();
        readFile();
        closeFile();
 
     }
+    public Image getFinish(){return finish;}
     public Image getGrass(){
         return grass;
     }
@@ -55,10 +58,5 @@ public class Map {
     public void closeFile() {
         sc.close();
     }
-
-
-
-
-
 
 }
