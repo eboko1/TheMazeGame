@@ -24,4 +24,4 @@ public class Maze extends JFrame {
 
 
 
-}//8
+}//9

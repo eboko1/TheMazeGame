@@ -40,12 +40,15 @@ public class Board  extends JPanel implements ActionListener {
 
         for (int y=0;y<14;y++){
             for(int x=0;x<14;x++){
-              if(map.getMap(x,y).equals("g")){
-                    g.drawImage(map.getGrass(),x*32,y*32,null);
+                if (map.getMap(x,y).equals("f")){
+                    g.drawImage(map.getFinish(),x*32,y*32,null);
                 }
-                if(map.getMap(x,y).equals("w")){
-                    g.drawImage(map.getWall(),x*32,y*32,null);
-                }
+                  if(map.getMap(x,y).equals("g")){
+                        g.drawImage(map.getGrass(),x*32,y*32,null);
+                    }
+                    if(map.getMap(x,y).equals("w")){
+                        g.drawImage(map.getWall(),x*32,y*32,null);
+                    }
 
             }
         
@@ -53,7 +56,7 @@ public class Board  extends JPanel implements ActionListener {
         g.drawImage(player.getPlayer(),player.getTileX()*32,player.getTileY()*32,null);
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);28
-                g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
+              //  g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
     }
 
     public class Al extends KeyAdapter{
