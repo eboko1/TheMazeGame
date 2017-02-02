@@ -50,7 +50,7 @@ public class Board  extends JPanel implements ActionListener {
             }
         
         }
-        g.drawImage(player.getPlayer(),player.getTileX(),player.getTileY(),null);
+        g.drawImage(player.getPlayer(),player.getTileX()*32,player.getTileY()*32,null);
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);28
                 g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
@@ -60,18 +60,26 @@ public class Board  extends JPanel implements ActionListener {
         public void  keyPressed(KeyEvent e){
         int keycode = e.getKeyCode();
             if (keycode == KeyEvent.VK_UP){
+                if (!map.getMap(player.getTileX(),player.getTileY()-1).equals("w")){
                 player.move(0,-1);
               }
+            }
 
-            if (keycode == KeyEvent.VK_DOWN){
-                player.move(0,1);
-                 }
+            if (keycode == KeyEvent.VK_DOWN) {
+                if (!map.getMap(player.getTileX(), player.getTileY() + 1).equals("w")) {
+                    player.move(0, 1);
+                }
+            }
              if (keycode == KeyEvent.VK_LEFT){
+                 if (!map.getMap(player.getTileX()-1,player.getTileY()).equals("w")){
                 player.move(-1,0);
                  }
+            }
             if (keycode == KeyEvent.VK_RIGHT) {
-                player.move(1,0);
-                 }
+                if (!map.getMap(player.getTileX()+1, player.getTileY()).equals("w")) {
+                    player.move(1, 0);
+                }
+            }
           }
 
         public  void keyRelased(KeyEvent e){
