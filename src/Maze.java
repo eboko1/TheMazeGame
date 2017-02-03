@@ -9,7 +9,7 @@ public class Maze extends JFrame {
 
     public Maze(){
         JFrame frame  = new JFrame();
-        frame.setTitle(" Maze Game ");
+        frame.setTitle("Created by Vika Frantsuh Maze_Game ");
         frame.add(new Board());
         frame.setSize(WIDTH,HEIGHT);
         frame.setLocationRelativeTo(null);
@@ -24,4 +24,4 @@ public class Maze extends JFrame {
 
 
 
-}//9
+}

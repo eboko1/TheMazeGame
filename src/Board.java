@@ -11,12 +11,15 @@ import java.awt.event.KeyEvent;
  * Created by Vika on 25.01.2017.
  */
 public class Board  extends JPanel implements ActionListener {
+    private Maze maze;
+
     private Timer timer;
 
     private  Map map;
     private Player player;
+    private boolean win = false;
     private String message="";
-
+    private Font font = new Font("Serif",Font.BOLD,48);
 
     public Board(){
         map =new Map();
@@ -33,6 +36,7 @@ public class Board  extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (map.getMap(player.getTileX(),player.getTileY()).equals("f")){
             message=("Winner");
+            win=true;
         }
         repaint();
     }
@@ -41,25 +45,30 @@ public class Board  extends JPanel implements ActionListener {
 
     public void paint(Graphics g){
         super.paint(g);//not paint
-
-        for (int y=0;y<14;y++){
-            for(int x=0;x<14;x++){
-                if (map.getMap(x,y).equals("f")){
-                    g.drawImage(map.getFinish(),x*32,y*32,null);
+    if(!win){
+        for (int y=0;y<14;y++) {
+            for (int x = 0; x < 14; x++) {
+                if (map.getMap(x, y).equals("f")) {
+                    g.drawImage(map.getFinish(), x * 32, y * 32, null);
                 }
-                  if(map.getMap(x,y).equals("g")){
-                        g.drawImage(map.getGrass(),x*32,y*32,null);
-                    }
-                    if(map.getMap(x,y).equals("w")){
-                        g.drawImage(map.getWall(),x*32,y*32,null);
-                    }
+                if (map.getMap(x, y).equals("g")) {
+                    g.drawImage(map.getGrass(), x * 32, y * 32, null);
+                }
+                if (map.getMap(x, y).equals("w")) {
+                    g.drawImage(map.getWall(), x * 32, y * 32, null);
+                }
 
             }
-        
         }
-        g.drawString(message,50,50); //  winner
-
         g.drawImage(player.getPlayer(),player.getTileX()*32,player.getTileY()*32,null);
+    }
+        if(win) {
+            //add winner string
+            g.setColor(Color.orange);
+            g.setFont(font);
+            g.drawString(message, 150, 150); //  winner
+        }
+
          //g.setColor(Color.red);
          //g.fillRect(45,60,32,32);28
               //  g.drawImage(map.getFinish(),448-32*2,448-32*2,null);
